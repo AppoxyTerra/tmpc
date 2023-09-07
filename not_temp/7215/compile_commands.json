@@ -1,0 +1,13 @@
+[{
+	"directory": "C:\\Users\\pluto\\Desktop\\tmpc\\not_temp\\7215",
+	"file": "main.cpp",
+	"output": "main.o",
+	"arguments": [
+		"D:\\Old F\\Programs\\LLVM\\bin\\clang++.exe",
+		"-xc++",
+		"main.cpp",
+		"--driver-mode=g++",
+		"-c",
+		"--target=x86_64-pc-windows-msvc19.32.31332"
+	]
+}]

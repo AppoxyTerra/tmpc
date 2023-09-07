@@ -1,0 +1,5 @@
+
+
+run:
+	g++ main.cpp -o a.exe
+	.\a.exe
