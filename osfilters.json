@@ -1,0 +1,17 @@
+[
+	{
+		"if": {
+			"system": "Windows"
+		},
+		"then":{
+			"startswith": "win."
+		}
+	},{
+		"if": {
+			"system": "Linux"
+		},
+		"then":{
+			"startswith": "win."
+		}
+	}
+]
