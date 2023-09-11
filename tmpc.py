@@ -13,6 +13,8 @@ import platform
 import re
 print(f"==== TEMP-CODE (v{VERSION}) ====")
 __dir__ = __file__.replace("\\","/").rsplit("/",1)[0]
+if not path.isdir(f"{__dir__}/not_temp"):
+	mkdir(f"{__dir__}/not_temp")
 templates = listdir(f"{__dir__}/templates/")
 
 
@@ -66,12 +68,13 @@ if cmd[0] == ".":
 	n = randint(0,9999)
 	folder = f"{__dir__}/not_temp/{n:#04}"
 	for _ in range(MAX_FILES):
-		if path.isdir(folder):
+		if not path.isdir(folder):
 			break
-		folder = f"{__dir__}/not_temp/{n:#04}"
 		n+=1
+		folder = f"{__dir__}/not_temp/{n:#04}"
 	else:
 		print(f"Failed to create folder, you've got over {MAX_FILES} projects !")
+		input("Press enter to quit.")
 		quit(1)
 	mkdir(folder)
 	f = open(f"{folder}/main{cmd}","w")
